@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dota 2 Website</title>
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="blueberry.css">
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #f0f0f0;
+			font: 14px/20px Arial, Sans-Serif;
+			color: #555;
+			margin: 0;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 180%;
+			line-height: 120%;
+			padding: 5% 0;
+		}
+
+		h2 {
+			text-decoration: underline;
+			line-height: 280%;
+			padding-left: 2%;
+		}
+
+		h3 {
+			line-height: 110%;
+			padding: 5% 0;
+		}
+
+		p {
+			padding: 1%
+		}
+
+		img {
+			text-align: center;
+			max-width: 100%;
+			height: auto;
+			width: auto;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		a:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		header {
+			background: #740A4E;
+			width: 100%;
+			height: 86px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			opacity: 0.90;
+		}
+
+		#logo {
+			margin: 20px;
+			float: left;
+			width: 300px;
+			height: 60px;
+			background: url(img/Dota2.png) no-repeat center;
+			padding-top: -5%;
+
+		}
+
+		nav {
+			float: right;
+			padding: 35px 20px 20px 0;
+		}
+
+		#menu-icon {
+			display: hidden;
+			width: 40px;
+			height: 40px;
+			background: url(img/icon.png) center;
+		}
+
+		a:hover#menu-icon {
+			border-radius: 4px 4px 0 0;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		nav ul li {
+			display: inline-block;
+			float: left;
+			padding: 10px;
+		}
+
+		.current {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		#doc {
+			margin: 40px 0;
+		}
+
+		#content {
+			margin: 0 auto;
+			max-width: 1140px;
+			margin-top: 110px;
+		}
+
+		.blueberry {
+			max-width: 960px;
+			margin-top: 110px;
+		}
+
+		section {
+			width: 29%;
+			float: left;
+			margin: 2% 2%;
+			text-align: center;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		article {
+			float: left;
+			margin: 0 auto;
+			width: 50%;
+			height: auto;
+			padding: 4%;
+		}
+
+		aside {
+			float: right;
+			margin: 0 auto;
+			width: 35%;
+			height: auto;
+			padding: 3%;
+		}
+
+		ul.gym li {
+			padding-left: 3%;
+		}
+
+		footer {
+			background: #333333;
+			width: 100%;
+			overflow: hidden;
+			opacity: 0.90;
+		}
+
+		footer p, footer h3 {
+			color: #fff;
+		}
+
+		footer p a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		ul.social li {
+			display: inline;
+		}
+
+		ul.social li img {
+			height: 50px;
+		}
+
+		footer.second {
+			border-top: 1px solid #4D4E50;
+			background-color: #333333;
+			max-height: 50px;
+			text-align: center;
+			opacity: 0.95;
+		}
+
+		/**------------ Media!!!!----------**/
+		@media screen and (max-width: 478px) {
+			body {
+				position: absolute;
+			}
+		}
+
+		@media screen and (max-width: 740px) {
+			header {
+				position: absolute;
+			}
+			#menu-icon {
+				display: inline-block;
+			}
+			nav ul, nav:active ul {
+				display: none;
+				position: absolute;
+				padding: 20px;
+				background: #405580;
+				border: 1px solid #fff;
+				right: 20px;
+				top: 60px;
+				width: 50%;
+				border-radius: 2px 0 2px 2px;
+			}
+			nav li {
+				text-align: center;
+				width: 100%;
+				padding: 10px 0;
+				margin: 0;
+			}
+			nav:hover ul {
+				display: block;
+			}
+			section {
+				float: left;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			article {
+				float: left;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			aside {
+				float: left;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="jquery.blueberry.js"></script>
+
+	<script>
+		$(window).load(function() {
+			$('.blueberry').blueberry();
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<a href="#" id="logo"></a>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="#" class="current">Home</a></li>
+				<li><a href="#">Hero Name</a></li>
+				<li><a href="#">Set And Item</a></li>
+				<li><a href="#">Shop</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="doc">
+		<div id="content">
+			<div class="blueberry">
+				<ul class="slides">
+					<li><img src="img/1.jpg"></li>
+					<li><img src="img/2.jpg"></li>
+					<li><img src="img/3.jpg"></li>
+					<li><img src="img/4.jpg"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<section>
+		<img src="img/trainers.png">
+		<h1>Our Training !</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae numquam assumenda excepturi nobis. Libero, quidem quod modi adipisci. Ut aspernatur voluptatibus mollitia quas perspiciatis iusto officiis voluptatem, ullam neque totam.</p>
+	</section>
+	<section>
+		<img src="img/check.png">
+		<h1>Check Us - Free !</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, facilis a reprehenderit repudiandae quia in ipsum debitis delectus quod consectetur illum. Deleniti non accusantium, exercitationem quidem, optio praesentium sint autem!</p>
+	</section>
+	<section>
+		<img src="img/location.png">
+		<h1>Our Location !</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id architecto autem nihil explicabo assumenda perspiciatis placeat repellat, ex libero ullam iure, quis, expedita impedit. Tenetur dolores adipisci et quod.</p>
+	</section>
+	<div class="clear"></div>
+	<article>
+		<img src="img/5.jpg">
+	</article>
+	<aside>
+		<h2>Jadwal Latihan</h2>
+		<ul class="gym">
+			<li><h3>Latihan Dasar : 08:00 - 09:00</h3></li>
+			<li><h3>Latihan Kekompakan Tim : 10:00 - 11:00</h3></li>
+			<li><h3>Latihan Bertahan : 14:00 - 15:00</h3></li>
+			<li><h3>Latihan Menyerang : 16:00 - 17:00</h3></li>
+		</ul>
+	</aside>
+	<div class="clear"></div>
+	<section>
+		<h1>NeewBee</h1>
+		<img src="img/newbee.jpg">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae numquam assumenda excepturi nobis. Libero, quidem quod modi adipisci. Ut aspernatur voluptatibus mollitia quas perspiciatis iusto officiis voluptatem, ullam neque totam.</p>
+	</section>
+	<section>
+	<h1>Na'vi</h1>
+		<img src="img/navi.jpg">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id architecto autem nihil explicabo assumenda perspiciatis placeat repellat, ex libero ullam iure, quis, expedita impedit. Tenetur dolores adipisci et quod.</p>
+	</section>
+	<section>
+		<h1>Evil Genuises</h1>
+		<img src="img/eg.jpg">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, facilis a reprehenderit repudiandae quia in ipsum debitis delectus quod consectetur illum. Deleniti non accusantium, exercitationem quidem, optio praesentium sint autem!</p>
+	</section>
+
+	<footer>
+	<section>
+		<h3><b>Information</b></h3>
+			<p><b>0899-999-999</b>
+			<br><br>
+			Jl. A.yani 2, Kab. Kubu Raya <br>
+			Pontianak, Kalimanatan Barat <br>
+			alldota@dota2.com
+			</p>
+	</section>
+		<section>
+			<h3>Connect With Us!</h3>
+			<ul class="social">
+				<li><a href="#"><img src="img/facebook1.png"></a></li>
+				<li><a href="#"><img src="img/googleplus.png"></a></li>
+				<li><a href="#"><img src="img/twitter1.png"></a></li>
+				<li><a href="#"><img src="img/youtube.png"></a></li>
+			</ul>
+		</section>
+		<section>
+			<img src="img/weight-lifter.png">
+		</section>
+	</footer>
+	<footer class="second">
+		<p>&copyCopyright 2017 - Dota 2 Website</p>
+	</footer>
+
+</body>
+</html>
